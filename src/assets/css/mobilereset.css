@@ -1,0 +1,274 @@
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+@media (min-width: 750px){
+  body{ 
+    width:750px;
+    margin: 0 auto;
+  }
+}
+body,h1, h2, h3, h4, h5, h6,
+dl, dt, dd, dt+dd{
+	margin: 0;
+	padding: 0;
+}
+/** 重置列表元素 **/
+ul, ol { list-style:none; padding: 0;margin:0; }
+h1,h2,h3,h4,h5,h6{
+	font-weight: bold;
+}
+em,i{
+	font-style: normal;
+}
+p{
+	padding: 0;
+	margin: 0;
+}
+a{
+  color: #4A4A4A;
+}
+a:hover{
+  color: #FF6600;
+  text-decoration: none;
+}
+a,button,input,textarea{
+  outline: none;  
+} 
+.btn-warning {
+    background-color: #FF6600;
+    border-color: #FF6600;  
+}
+
+/** 清除浮動 **/
+.clearfix:after{content:".";clear:both;height:0;visibility:hidden;display:block;}
+.clearfix{*zoom:1;}
+.flex-warp { display:-webkit-box; display:-webkit-flex; display: box-flex; display:flex; }
+.flex-child {  -webkit-box-flex:1; -webkit-flex:1; box-flex: 1; box:1; flex:1;}
+
+
+/** 公共樣式 **/
+.fl { float:left; }
+.fr { float: right; }
+.datalazyload {	border:none; width:1px;	height:1px;	overflow:hidden; }
+.center{ text-align:center; margin-left:auto; margin-right:auto; }
+.dis{ display:block; }
+.undis{	display:none; }
+.disin{ display:inline !important; }
+.fs-10{ font-size:10px; }
+.fs-12{ font-size:12px; }
+.fs-13{ font-size:13px; }
+.fs-15{ font-size:15px; }
+.fs-18{ font-size:18px; }
+.ft-lt{ float:left; }
+.ft-rt{ float:right; }
+.fw-nm{ font-weight:normal; }
+.fw-bd{ font-weight:bold; }
+.fc-red{ color: #FC0000; }
+.fc-green{ color: #009A00; }
+.fc-gray{ color: #6A6A6A; }
+.fc-org{ color: #FF6600; }
+.fc-blue{ color:#0044DD;}
+.tb-none-bd td{ border: 0; }
+.yahei{ font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei"; }
+.dialog { display: none; z-index: 99; position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; -webkit-box-pack: center; -webkit-box-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#dialog {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+/*2行溢出隱藏*/
+.line2 {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.line1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+/*快捷佈局*/
+.mgt5{margin-top: 5px; } 
+.mgt20{margin-top: 20px; } 
+.mgt10{margin-top: 10px; } 
+.mgb10{margin-bottom: 10px; } 
+.mgl20{margin-left: 20px; }
+.mgl10{margin-left:10px;}
+.mgl5{margin-left:5px;}
+.pd8{ padding: 8px;}
+.pdX8{ padding-left:8px;padding-right:8px;}
+.pdY8{ padding-top:8px;padding-bottom:8px;}
+.pd10{ padding: 10px;}
+.pdX10{ padding-left:10px;padding-right:10px;}
+.pdY10{ padding-top:10px;padding-bottom:10px;}
+.mgX10{ margin-left:10px;margin-right:10px;}
+.mgY10{ margin-top:10px;margin-bottom:10px;}
+.pd14{ padding: 14px;}
+.pdX14{ padding-left:14px;padding-right:14px;}
+.pdY14{ padding-top:14px;padding-bottom:14px;}
+.mgX14{ margin-left:14px;margin-right:14px;}
+.mgY14{ margin-top:14px;margin-bottom:14px;}
+.pd20{ padding: 20px;}
+.pdX20{ padding-left:20px;padding-right:20px;}
+.pdY20{ padding-top:20px;padding-bottom:20px;}
+
+/*bt樣式重置*/
+.form-control{
+	padding:5px 5px;
+}
+.modal-dialog{/*模態窗樣式重置*/
+  padding:10px 5px;
+  margin:10px 0;
+  width:100%;
+}
+.modal-header {
+  padding: 10px 5px;
+}
+.modal-body {
+  padding: 10px 5px;
+}
+.close {
+  font-size: 27px;
+  line-height: 1;
+  opacity: 0.3;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+   vertical-align: middle; 
+}
+
+.radio, .checkbox {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+label {
+  font-weight: normal;
+}
+div.Validform_checktip{
+  height: auto;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {background-color: #ddd;color: #333;}
+
+/*麵包屑樣式修改*/
+.breadcrumb{
+  margin-bottom: 10px;
+  padding:10px 10px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.breadcrumb>.active {
+    color: #F60;
+}
+.breadcrumb > li + li:before{
+  content: "> ";
+  padding: 0 3px;
+}
+
+/*區塊分段默認值*/
+section{
+  padding-left:5px;
+  padding-right:5px;
+}
+
+/*提示插件样式 */
+
+.msg-box{
+  z-index:99999;
+  position:fixed;
+  top:50%;
+  left:50%;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000,endColorstr=#cc000000);
+  background:rgba(0,0,0,0.8);
+  border-radius:5px;
+  color:#fff;
+  padding:10px;
+  width: 150px;
+  text-align: center;
+  margin-left:-75px;
+  margin-top:-20px;
+
+}
+.msg-box i {
+  vertical-align: middle;
+  margin-right:5px;
+  font-size: 1.5em;  
+}
+
+/*正在加載*/
+.pageLoad {
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+/*没有数据时的样式*/
+.no-data {
+  text-align: center;
+  padding:50px 0;
+}
+.no-data img {
+  width: 40%;
+}
+.no-data p {
+  padding:15px 0;
+  color:#999; 
+}
+.no-data a {
+    width: 30%;
+    color: #fa741a;
+    border-color: #fa741a;
+}
+.no-data a.nodata-btn {
+  width: 30%;
+  display: inline-block;
+  color:#fa741a;
+  border-color:#fa741a;
+  background:none;
+}
+.no-data a:last-child {
+  margin-left: 10px;
+}
+
+/*最新加载更多*/
+.cm-logMore,.cm-noMore {
+    text-align: center;
+    padding:10px 0;
+    font-size: 14px;
+    color: #aaa;
+    background: #fff;
+}
+.cm-logMore span {
+  margin-left: 3px;
+}
+
+.cm-logMore i {
+font-size: 16px;
+}
+
+.cm-logMore span,.cm-logMore i {
+  vertical-align: middle;
+}
+/*廣告系統*/
+.openx-img img {
+  width: 100%;
+  height: auto;
+}
+
+
+

@@ -1,0 +1,302 @@
+.article-list {
+	padding:0 10px;
+}
+.breadcrumb{
+	background: none;
+	margin-bottom: 0;
+}
+.breadcrumb > li + li:before{
+	content: "> ";
+}
+.search-wrap{
+	background-color: #f5f5f5;
+  border: 1px solid #e7e7e7;
+  border-left: 0;
+  border-right: 0;
+	padding: 10px;
+}
+.search-btn{
+	padding-left:20px;
+	padding-right:20px;
+	margin-left: 10px;
+	font-weight: bold;
+	background: #F37B1D;
+}
+.custom-text{
+	width:181px;
+	display: inline-block;
+	border:1px solid #F37B1D;
+}
+.limit-wrap{
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-left: 0;
+    border-right: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    padding: 10px;
+    padding-bottom: 0;
+}
+.options{
+	border-bottom: 1px solid #dddddd;
+	padding: 5px 0;
+	line-height: 25px;
+}
+.options a{
+	margin-right: 10px;
+	color: #333;
+	text-decoration: none;
+}
+.options a.current{
+	color: #ff6600;
+	font-weight: bold;
+}
+.limit{
+	margin-bottom: 0;
+}
+
+.backTop{
+	width:55px;
+	height: 54px;
+	position: fixed;
+	bottom:30px;
+	right:5px;
+	z-index: 999999;
+	display: none;
+}
+.pagination_plugin{
+	height: 50px;
+	line-height: 50px;
+	padding:5px 0;
+}
+
+/**
+ * 物件列表公共模塊樣式
+ * @author      yulei@addcn.com
+ * @updateTime  2014-12-11
+*/
+.article-list > a{
+	padding: 8px 0;
+	display: block;
+	border-bottom: 1px solid #e7e7e7;
+	color: #222;
+	text-decoration: none;
+}
+#shContent > a:last-child {
+	border-bottom: none;
+}
+.article-list a:visited dt{
+	color:#666;
+}
+.article-list .img-wrap{
+	width: 110px;
+	height:81px;
+	margin-right: 10px;
+	float: left;
+	position:relative;
+	z-index: 10;
+}
+.article-list .img-wrap img.thum-img{
+	width: 108px;
+	height: 81px;
+}
+.vip-logo{
+	position: absolute;
+	left: 0;
+	top:0;
+	width:31px;
+	height: 31px;
+}
+.article-list dl {
+    height: 82px;
+    overflow: hidden;
+}
+.article-list dt{
+	font-size: 15px;
+	line-height: 18px;
+	overflow : hidden;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 6px;
+	
+}
+.article-list dd{
+	font-size: 12px;
+    line-height: 19px;
+	color:#666;
+	overflow: hidden;
+}
+.article-list dd:nth-child(2) span {
+	float:right;
+	color:#ff4e00;
+	font-size: 15px;
+}
+.article-list dd:nth-child(2) span samll {
+	font-size:12px;
+}
+.article-list dd:nth-child(3){
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 65px;
+    color:#aaa;
+}
+.article-list dd:last-child span {
+	padding:0 3px;
+	color: #ffae34;
+	border: 1px solid #ffae34;
+	margin-right:5px;
+	font-size:11px;
+	border-radius:3px;
+}
+.recommend-title {
+	padding:10px;
+	border-top:1px solid #e2e2e2;	
+	border-bottom:1px solid #e2e2e2;
+	color:#999;
+	margin-top: -1px;
+}
+.recommend-pot {
+    position: fixed;
+    left: 0;
+    top: 39px;
+    width: 100%;
+    background: #fff;
+    z-index: 98;
+}
+
+ 
+.banner{
+	text-align: center;
+	background: #D44339;
+	position: relative;
+}
+.banner img{
+	max-width: 480px;
+}
+
+.moreList {
+    text-align: center;
+}
+.moreList span:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    margin-top: -7px;
+    left: 0;
+    background-size: 15px auto;
+    z-index: 3;
+}
+.moreList span {
+    position: relative;
+    color: #cccfd8;
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.moreList span i {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    margin-top: -7px;
+    left: 0;
+    background-size: 15px auto;
+    margin-right: 8px;
+    vertical-align: -2px;
+    z-index: 2;
+    -webkit-animation: loading 1s linear infinite;
+    animation: loading 1s linear infinite;
+}
+@-webkit-keyframes loading {100% {-webkit-transform-origin: center;transform-origin: center;-webkit-transform: rotate(360deg);transform: rotate3d(360deg);}}
+@keyframes loading {100% {-webkit-transform-origin: center;transform-origin: center;-webkit-transform: rotate(360deg);transform: rotate3d(360deg);}}
+.no-more{
+    height: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+.no-more span {
+    width: 160px;
+    height: 12px;
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #999;
+    color: #ababab;
+    position: relative;
+    margin-top: 19px;
+
+}
+.no-more span i {
+	display: block;
+	padding: 5px 10px;
+    background-color: #f4f4f4;
+	position: absolute;
+    top: -15px;
+    left: 26px;
+    font-size: 12px;
+    font-style: normal;
+    color: #333;
+}
+
+.new_vip_bg{
+	position: absolute;
+	left: -2px;
+	top:-10px;
+	z-index: 99;
+	border-top: 15px solid transparent;
+    border-right: 15px solid #FF4E00;
+    border-bottom: 15px solid transparent;
+    -webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.new_vip_txt{
+	position: absolute;
+	left: 0px;
+	top:-2px;
+	width:25px;
+	transform:rotate(-45deg);
+	z-index: 100;
+	color: #fff;
+	font-size: 8px;
+}
+.newhouse_txt{
+	position: absolute;
+	left: 0px;
+	top:12px;
+	padding:0px 3px;
+	z-index: 100;
+	color: #fff;
+	background: #5091fc;
+	font-size: 12px;
+}
+#loading_box{
+	width:100%;
+	height: 136px;
+	text-align: center;
+	margin:30% 0 50px;
+}
+.loading_border{
+	width:60%;
+	max-width: 260px;
+	padding:30px 0;
+	background: #fff;
+	border:2px solid #FF6300;
+	border-radius: 5px;
+	text-align: center;
+	margin: 0 auto;
+}
+#loading_box .loading_img{
+	color:#f60;
+	height: 40px;
+}
+#loading_box .loading_txt{
+	font-size:16px;
+	padding:20px 0 0;
+	font-weight: bold;
+
+}

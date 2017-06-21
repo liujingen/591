@@ -1,0 +1,373 @@
+
+/**
+ * 觸屏版 條件篩選
+ * @author      yulei@addcn.com
+ * @copyright   2015-09-23
+ */
+
+/**
+ * 改版后篩選條件 - 橫條
+ */
+#menu{
+    height: 40px;
+}
+.menunav {
+    display: -webkit-box;
+    height: 40px;
+    width: 100%;
+    background: #FFF;
+    border-bottom: 1px solid #d9d9d9;
+    -webkit-box-pack: center;
+    -webkit-box-align: center
+}
+.menunav > span {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    height: 40px;
+    width: 24%
+}
+.menunav > span.active{
+    color: #f60;
+}
+.menunav > span span {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    -webkit-box-flex: 1;
+    padding-left: 6px
+}
+.menunav i {
+    display: block
+}
+.menunav .line {
+    width: 1px;
+    height: 20px;
+    background: #d9d9d9
+}
+.menunav span i {
+    margin-right: 6px;
+    margin-bottom: 5px;
+}
+.menunav span i.icon-sort-up{
+    margin-bottom: -3px;
+}
+#menuinfo {
+    z-index: 100;
+    position: relative
+}
+.menuinfo {
+    position: fixed!important;
+    width: 100%;
+    left: 0;
+    top: 0
+}
+.listNum{
+    background: #FFF3EB;
+    border-bottom: 1px solid #FFDCC4;
+    line-height: 35px;
+    text-indent:15px;
+    color: #666;
+}
+
+/*遮罩*/
+#dialog {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    background: rgba(0, 0, 0, 0.3)
+}
+
+/*操作最外層*/
+.optionlist {
+    /*display: none;*/
+    z-index: 100;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/*區域選擇*/
+.iteminfo {
+    width: 100%;
+    height: 100%;
+    /*display: none;*/
+    overflow-y:auto; 
+}
+.regioninfo {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.iteminfo ul li {
+    height: 39px;
+    line-height: 39px;
+    overflow: hidden;
+}
+.iteminfo ul li.active {
+    background: #f4f4f4;
+}
+.iteminfo ul li.active a,
+.iteminfo ul li a.active {
+    color: #f60;
+    background: #f4f4f4;
+}
+.iteminfo ul li a {
+    display: block;
+    height: 39px;
+    color: #333;
+    padding-left:15px;
+    border-bottom: 1px solid #e7e7e7;
+    text-decoration: none;
+}
+
+
+/*小區域和更多樣式*/
+.sectioninfo{
+    display: none;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #f4f4f4;
+}
+.flex-warp>div{
+  border-right: 1px solid #e7e7e7;  
+}
+.areainfo .regioninfo , .areainfo .section , .moreinfo .regioninfo,.subwaylineinfo,.mrtcoods {
+    height: 234px;
+    overflow-y:auto; 
+}
+.moreinfo .sectioninfo{
+    height: 234px;
+    overflow-y:auto; 
+}
+.order{
+   width: 64%; 
+}
+.sectioninfo > ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.sectioninfo > ul li a{
+    border-bottom: none;
+}
+.sectioninfo > ul li a.active{
+    color: #f60;
+}
+.areainfo .section > ul li a.active:after , .moreinfo .sectioninfo > ul li a.active:after,.mrtcoods > ul li a.active:after{
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    display: inline;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    margin-top: 0;
+    content: "\f00c";
+    margin-left:10px;
+}
+.price-wrap{
+    padding-left:15px;
+}
+.sh-text{
+    line-height:20px;
+    width:70px;
+    height: 30px;
+    display: inline-block;
+}
+.text-search-btn{
+    padding:3px 15px;
+    font-size: 15px;
+    display:inline-block;
+}
+
+.prefect{
+    width:100%;
+    padding:7px 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    box-shadow: 0 -3px 3px 0 rgba(155,155,155,0.4);
+    z-index: 21;
+    background: #fff;
+}
+.prefect .btn{
+    padding:5px 15px;
+}
+.icon-ok:before{
+    margin-left:20px;
+}
+
+/*關鍵字搜尋*/
+.c-search {
+    display: none;
+    z-index: 100004;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+}
+
+.c-search .searchinfo {
+    position: relative;
+    display: -webkit-box;
+    height: 50px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 7px 10px 7px 0;
+    background: #ececec;
+    border-bottom: 1px solid #d9d9d9
+}
+
+.c-search form {
+    display: block;
+    -webkit-box-flex: 1
+}
+
+.c-search .cancel {
+    display: block;
+    height: 35px;
+    width: 45px;
+    text-align: right;
+    line-height: 35px;
+    color: #F60;
+    box-sizing: border-box
+}
+
+.c-search .cancel:visited {
+    color: #111
+}
+
+.c-search .search {
+    display: block;
+    height: 35px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #f60;
+    background: #fff;
+    color: #999;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: none;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 8px
+}
+
+.c-search .gosearch {
+    z-index: 2;
+    position: absolute;
+    right: 48px;
+    top: 8px;
+    width: 45px;
+    height: 33px;
+    text-align: center;
+    line-height: 38px;
+    background: #f60;
+    z-index: 99;
+    border-radius:0 2px 2px 0;
+}
+.c-search .gosearch i{
+    color: #fff;
+    font-size: 22px;
+}
+.c-search .history,.c-search .result {
+    display: none;
+    background: #fff;
+    text-align: left;
+    cursor: pointer
+}
+.c-search .result span,.c-search .history span{
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 22px;
+    padding: 6px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #c9c9c9;
+    cursor: pointer
+}
+.c-search .result span{
+    text-align:center;
+}
+
+.c-search .result span:active,.c-search .result span:hover {
+    background: #ededed
+}
+
+.c-search strong {
+    font-weight: 400;
+    color: #F60
+}
+
+.c-select {
+    position: relative;
+    padding: 8px 20px;
+    line-height: 20px;
+    color: #f60;
+    background: #f4f4f4;
+    border-bottom: 1px solid #d9d9d9
+}
+
+.c-select span {
+    padding-right: 5px;
+    color: #666
+}
+
+.issearch {
+    padding: 8px 90px 8px 20px;
+    height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.c-select .research {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    color: #f60;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #cdcdcd
+}
+
